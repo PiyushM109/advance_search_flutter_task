@@ -1,3 +1,5 @@
+import 'package:advancesearch/home_screen.dart';
+import 'package:advancesearch/second_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
@@ -9,6 +11,13 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  List Screens = [
+    HomeScreen(),
+    SecondScreen(),
+    SecondScreen(),
+    SecondScreen(),
+    SecondScreen(),
+  ];
   int _page = 0;
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
@@ -17,7 +26,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
         bottomNavigationBar: CurvedNavigationBar(
           key: _bottomNavigationKey,
-          index: 0,
+          index: _page,
           height: 60.0,
           items: [
             Icon(Icons.settings, size: 30, color: Colors.white,),
@@ -36,26 +45,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               _page = index;
             });
           },
-          letIndexChange: (index) => true,
         ),
-        body: Container(
-          color: Colors.white12,
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(_page.toString(), textScaleFactor: 10.0),
-                ElevatedButton(
-                  child: Text('Go To Page of index 1'),
-                  onPressed: () {
-                    final CurvedNavigationBarState? navBarState =
-                        _bottomNavigationKey.currentState;
-                    navBarState?.setPage(0);
-                  },
-                )
-              ],
-            ),
-          ),
-        ));
+        body: Screens[_page]);
   }
 }
