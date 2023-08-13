@@ -2,10 +2,10 @@ import 'package:advancesearch/utils/app_layout.dart';
 import 'package:advancesearch/utils/my_text_field.dart';
 import 'package:flutter/material.dart';
 
-class JionedSection extends StatelessWidget {
+class JionedSectionWeb extends StatelessWidget {
   final String text1;
   final TextEditingController text2;
-  const JionedSection({
+  const JionedSectionWeb({
     super.key,
     required this.text1,
     required this.text2,
@@ -19,7 +19,7 @@ class JionedSection extends StatelessWidget {
           children: [
             Container(
               height: AppLayout.getHeight(80),
-              width: AppLayout.getScreenWidth() * 0.65,
+              width: AppLayout.getScreenWidth() * 0.40,
             ),
             Container(
               height: AppLayout.getHeight(55),
@@ -35,10 +35,10 @@ class JionedSection extends StatelessWidget {
             ),
             Positioned(
               top: 7,
-              right: -12,
+              left: 60,
               child: SizedBox(
                 height: AppLayout.getHeight(40),
-                width: AppLayout.getScreenWidth() * 0.55,
+                width: AppLayout.getScreenWidth() * 0.35,
                 child: MyTextField(
                   controller: text2,
                   hintText: text1,

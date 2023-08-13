@@ -1,4 +1,5 @@
-import 'package:advancesearch/bottom_navbar.dart';
+import 'package:advancesearch/check.dart';
+import 'package:advancesearch/mobile_bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BottomNavBar(),
+      home: Checker(),
     );
   }
 }

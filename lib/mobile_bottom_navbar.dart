@@ -4,14 +4,14 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 import 'screens/home_screen.dart';
 
-void main() => runApp(MaterialApp(home: BottomNavBar()));
+void main() => runApp(MaterialApp(home: MobileBottomNavBar()));
 
-class BottomNavBar extends StatefulWidget {
+class MobileBottomNavBar extends StatefulWidget {
   @override
-  _BottomNavBarState createState() => _BottomNavBarState();
+  _MobileBottomNavBarState createState() => _MobileBottomNavBarState();
 }
 
-class _BottomNavBarState extends State<BottomNavBar> {
+class _MobileBottomNavBarState extends State<MobileBottomNavBar> {
   List Screens = [
     HomeScreen(),
     SecondScreen(),
